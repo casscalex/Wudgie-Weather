@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thndr</title>
+        <title>Atmosphere</title>
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     </head>
 
@@ -17,8 +17,21 @@
 
         </section>
         
-        <!-- Spotify APT HTML -->
-        <section>
+        <!-- Spotify API HTML -->
+        <section class="Spotify-Container">
+            <!-- Authorization -->
+            <div>
+                <div>
+                    <label for="clientId" class="form-label">Client ID</label>
+                    <input type="text" class="form-control" id="clientId" placeholder="">
+                </div>
+                <div>
+                    <label for="clientSecret" class="form-label">Client Secret</label>
+                    <input type="text" class="form-control" id="clientSecret" placeholder="">
+                </div>
+                <input class="btn btn-primary btn-lg" type="button" onclick="requiersAuthorization" value="Request Authorization"><br/>
+            </div>
+          
 
         </section>
 
