@@ -2,28 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Team Weather Project</title>
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     </head>
 
     <body>
-          <div class="input">
+        <section class="section">
+            <div class="box">
+         
+            <div class="logo"><h1 class="bd-notification is-info">TEAM WEATHER</h1></div>
             <input type="text" placeholder="enter your zip" class="search_input">
-            <input type="submit" value="Submit" class="submit">
-          </div>
+            <input type="submit" value="Submit" class="submit button is-primary is-small is-outlined">
+ 
         </div>
       
         <div class="container">
           <div class="card">
-            <h3><span class="city"></span> <span class="state"></span></h3>
-            <p class="temp"></p>
+            <h3 class="title"><span class="city"></span> <span class="state"></span></h3>
+            <p class="temp subtitle"></p>
 
-            <p class="cond"></p>
+            <p class="cond subtitle"></p>
           </div>
         </div>
         <script src="assets/js/script.js"></script>
         </main>
-
+    </section>
     </body>
 </html>
