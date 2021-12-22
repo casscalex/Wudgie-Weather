@@ -5,6 +5,7 @@ var state = document.querySelector(".state");
 var cond = document.querySelector(".cond");
 var temp_f = document.querySelector(".temp");
 var card = document.querySelector(".card")
+var container = document.querySelector("#container")
 
 button.addEventListener("click", function () {
   fetch(
@@ -52,9 +53,9 @@ button.addEventListener("click", function () {
     let waveHeightF = "The wave height will be: " + waveHeightM.toFixed(2) + "ft"
     console.log(waveHeightF)
     var newDiv = document.createElement("div");
-    newDiv.innerHTML = "<p>" + swellHeightF + "</p>" + "</br>" + "<p>" + waveHeightF + "</p>"
+    newDiv.innerHTML = "<h2>" + swellHeightF + "</h2>" + "</br>" + "<h2>" + waveHeightF + "</h2>"
     newDiv.classList.add("card")
-    document.body.appendChild(newDiv)
+    container.appendChild(newDiv)
 
   }
   showWeather();
