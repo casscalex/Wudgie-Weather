@@ -1,20 +1,12 @@
-var redirectUri = "https://casscalex.github.io/Atmosphere/callback/"
+const lat = 58.7984;
+const lng = 17.8081;
+const params = 'windSpeed';
 
-var client_id = ""
-var client_secret =""
-// authorization
-function requestAuthorization() {
-  client_id = document.getElementById(clientId).value;
-  client_secret = documetn.getElementById(clientSecret).value;
-  localStorage.setItem("client_id", client_id)
-  localStorage.setItem("client_secret", client_secret);
-
-  let url = AUTHORIZE;
-  url =+ "?client_id=" + client_id;
-  url =+ "&response_type=code";
-  url =+ "&redirect_uri=" + encodeURI(redirectUri)
-  url =+ "&show_dialog=ture";
-  url =+ "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position";
-  window.location.href = url;
-
-}
+fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
+  headers: {
+    'Authorization': 'f04e4b50-62ac-11ec-8266-0242ac130002-f04e4c18-62ac-11ec-8266-0242ac130002'
+  }
+}).then((response) => response.json()).then((jsonData) => {
+  // Do something with response data.
+  consoleLog(jsonData);
+});
