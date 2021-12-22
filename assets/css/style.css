@@ -1,25 +1,45 @@
 :root {
-    background-image: element(nextBackground);
-    background-color: black;
-}
-
-.bg-img { 
     background-image: url(https://images.unsplash.com/photo-1559627755-42212e5c5fdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-position: center center;
+    background-color: black;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size:  cover;
-    background-color: black;
-
 }
 
 .box {
     border: none;
-    align-items: center;
 
+}
+
+.h1-logo {
+    font-size: 24px;
+    font-weight: 800;
+    font-style: italic;
 }
 
 .logo {
-    align-items: center;
-    background-image: url(./);
+    font-style: italic;
+    font-size: 34px;
 }
+
+.fa-sun-o {
+    color: tomato;
+}
+
+.columns {
+    padding: none;
+    margin: none;
+}
+
+#myVideo {
+    position: top;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  
+
+  
