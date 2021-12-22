@@ -1,12 +1,15 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+:root {
+    background-image: element(nextBackground);
+    background-color: black;
+}
 
 .bg-img { 
-    background-image: url(demo.jpg) ;
+    background-image: url(https://images.unsplash.com/photo-1559627755-42212e5c5fdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size:  cover;
-    background-color: #999;
+    background-color: black;
 
 }
 
@@ -18,4 +21,5 @@
 
 .logo {
     align-items: center;
+    background-image: url(./);
 }
