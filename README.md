@@ -9,7 +9,7 @@ An app that generates a one stop shop for both weather and surf forecast. The ap
 *JavaScript 
 
 ## Website
-https://github.com/casscalex/Weather-Music-Project
+https://casscalex.github.io/Wudgie-Weather/
 
 ## Contributions
 Created by Alex Cassidy, Benito Cavazos, Nick Anders, John Armstrong 
