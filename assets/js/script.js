@@ -4,6 +4,8 @@ var city = document.querySelector('.city');
 var state = document.querySelector('.state');
 var cond = document.querySelector('.cond');
 var temp_f = document.querySelector('.temp');
+var card = document.querySelector(".card")
+var container = document.querySelector("#container")
 
 
 button.addEventListener('click', function(){
@@ -22,3 +24,38 @@ fetch('https://api.weatherapi.com/v1/current.json?key=75fddf772d5247e68e71461221
 })
 
 })
+
+async function showWeather() {
+    weatherResponse = await fetch(
+      "https://api.weatherapi.com/v1/current.json?key=75fddf772d5247e68e714612211512&q=" +
+        input.value +
+        "&aqi=no"
+    );
+    weatherData = await weatherResponse.json();
+    let lat = weatherData.location.lat;
+    let lon = weatherData.location.lon;
+    const params = 'waveHeight,swellHeight'
+
+    surfResponse = await fetch(
+      `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lon}&params=${params}&start=1640433600&end=1640433600
+      `,
+      {
+        headers: {
+          Authorization: "4c238208-62a1-11ec-8990-0242ac130002-4c238280-62a1-11ec-8990-0242ac130002",
+        },
+      }
+    );
+    surfData = await surfResponse.json();
+    console.log(surfData)
+    let swellHeightM = surfData.hours[0].swellHeight.meteo*3.2808
+    let swellHeightF = "The swell will be: " + swellHeightM.toFixed(2) + "ft"
+    let waveHeightM =  surfData.hours[0].waveHeight.meteo*3.2808
+    let waveHeightF = "The wave height will be: " + waveHeightM.toFixed(2) + "ft"
+    console.log(waveHeightF)
+    var newDiv = document.createElement("div");
+    newDiv.innerHTML = "<h2>" + swellHeightF + "</h2>" + "</br>" + "<h2>" + waveHeightF + "</h2>"
+    newDiv.classList.add("card")
+    container.appendChild(newDiv)
+
+  }
+  showWeather();
