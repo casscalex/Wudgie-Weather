@@ -16,9 +16,7 @@ video {
     font-size: 100%;
     line-height: 1.4;
   }
-  body {
-    margin: 0;
-  }
+ 
   
   .viewport-header {
     position: relative;
@@ -30,7 +28,6 @@ video {
   }
   
   h1 {
-    color: #4a3a27;
     letter-spacing: -.1vw;
     line-height: 1.2;
     font-size: 0vw;
@@ -41,17 +38,8 @@ video {
       letter-spacing: -1.3vw;
     } */
   }
-
-  .subtitle {
-    color: white;
-    font-size: 1.9vw;
-    font-style: italic;
-    text-align: left;
-    line-height: .1;
-
-  }
   
-  main {
+  /* main {
     display: none;
     width: 80vw;
     left: 10%;
@@ -61,17 +49,11 @@ video {
     color: white;
     position: relative;
     padding: 1rem;
-  }
+  } */
 
-
-
-.box {
-    border: none;
-
-}
 
 .h1-logo {
-    font-size: 4vw;
+    font-size: 30px;
     font-weight: 800;
     font-style: italic;
     color: white;
@@ -79,9 +61,18 @@ video {
 
 .logo {
     font-style: italic;
-    font-size: 5.6vw;
+    font-size: 42px;
     color: white;
 }
+
+.subtitle {
+    color: white;
+    font-size: 14px;
+    font-style: italic;
+    text-align: left;
+    line-height: .4;
+
+  }
 
 .fa-sun-o {
     color: tomato;
