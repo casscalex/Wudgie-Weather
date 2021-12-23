@@ -18,23 +18,20 @@ fetch('https://api.weatherapi.com/v1/current.json?key=75fddf772d5247e68e71461221
     var condValue = data['current']['condition']['text'];
     city.innerHTML = cityValue+', ';
     state.innerHTML = stateValue;
-    temp_f.innerHTML = tempValue;
+    temp_f.innerHTML = tempValue + "º";
     cond.innerHTML = condValue;
     input.value = "";
-})
 
 })
-
 async function showWeather() {
-    weatherResponse = await fetch(
-      "https://api.weatherapi.com/v1/current.json?key=75fddf772d5247e68e714612211512&q=" +
-        input.value +
-        "&aqi=no"
-    );
+    weatherResponse = await fetch("https://api.weatherapi.com/v1/current.json?key=75fddf772d5247e68e714612211512&q=" + input.value + "&aqi=no")
     weatherData = await weatherResponse.json();
+    console.log(weatherData)
     let lat = weatherData.location.lat;
     let lon = weatherData.location.lon;
+    let cityValue = weatherData.location.name;
     const params = 'waveHeight,swellHeight'
+    
 
     surfResponse = await fetch(
       `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lon}&params=${params}&start=1640433600&end=1640433600
@@ -53,9 +50,10 @@ async function showWeather() {
     let waveHeightF = "The wave height will be: " + waveHeightM.toFixed(2) + "ft"
     console.log(waveHeightF)
     var newDiv = document.createElement("div");
-    newDiv.innerHTML = "<h2>" + swellHeightF + "</h2>" + "</br>" + "<h2>" + waveHeightF + "</h2>"
+    newDiv.innerHTML = "<h2>" + cityValue + "</h2>" + "</br>" + "<h2>" + swellHeightF + "</h2>" + "</br>" + "<h2>" + waveHeightF + "</h2>"
     newDiv.classList.add("card")
     container.appendChild(newDiv)
 
   }
   showWeather();
+});

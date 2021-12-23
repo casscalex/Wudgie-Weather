@@ -25,16 +25,36 @@
   <div class="columns is-centered is-mobile">
   <div class="column column is-narrow has-text-centered field has-addons">
     <div class="control">
-      <input class="input" type="text" placeholder="Enter your zip">
+      <input class="input search_input" type="text" placeholder="Enter your location">
     </div>
     <div class="control">
-      <a class="button is-info">
+      <button id="submit" class="button is-info submit">
         Search
-      </a>
+      </button>
     </div>
   </div>
 </div>
   
+<section class="columns is-narrow is-mobile is-centered">
+
+  <div class="is-narrow is-centered">
+    <h3 class="is-narrow location"><span class="city"></span> <span class="state"></span></h3>
+    <div class="is-narrow"><p class="tempCon"><span class="temp"></span><span class="cond"></span></p>
+
+    <p class="cond"></p>
+    
+  </div>
+</section>
+<section class="columns is-narrow is-mobile is-centered">
+  <div class="is-narrow">
+    <div id="cityContainer" class="container"></div><div id="container" class="container"></div>
+    </div>   
+  </div>
+</section>
+
+
+
+
 
 
 
@@ -61,19 +81,7 @@
     </div>
 
   </section> -->
-  <section class="columns is-flex is-multiline is-mobile is-centered">
 
-      <div>
-        <h3 class="title"><span class="city"></span> <span class="state"></span></h3>
-        <p class="temp subtitle"></p>
-
-        <p class="cond subtitle"></p>
-      </div>
-
-
-    
-
-  </section>
 </body>
 <script src="assets/js/script.js"></script>
 </html>
