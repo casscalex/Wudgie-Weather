@@ -7,6 +7,7 @@ video {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1000;
   }
   
   html, body {
@@ -53,7 +54,7 @@ video {
 
 
 .h1-logo {
-    font-size: 30px;
+    font-size: 31px;
     font-weight: 800;
     font-style: italic;
     color: white;
@@ -74,8 +75,8 @@ video {
 
   }
 
-.fa-sun-o {
-    color: tomato;
+.fa-sun {
+    color: #FF9B22;
 }
 
 .columns {
@@ -92,6 +93,46 @@ video {
     min-height: 100%;
   }
 
-  .box {
+.box {
       background-color: transparent !important;
   }
+
+.location {
+      font-size: 24px;
+      color: white;
+      text-align: center;
+  }
+
+.temp {
+    font-size: 90px;
+    color: white;
+    line-height: .9;
+    font-style: italic;
+    letter-spacing: -.4vw;
+    font-weight: 500;
+}
+
+.cond {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.tempCon {
+    text-align: center;
+}
+
+.container {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: .6;
+}
+
+
+
+.card {
+    padding: 20px;
+    margin: 10px;
+}
